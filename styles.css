@@ -157,6 +157,14 @@ a:hover {
     row-gap: 4rem;
   }
 
+  .gradient-title {
+    background-image: linear-gradient(
+      to bottom right,
+      var(--title-gradient-start),
+      var(--title-gradient-end)
+    );
+  }
+
   h1 {
     font-size: 2.5rem;
   }
