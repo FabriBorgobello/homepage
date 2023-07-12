@@ -12,6 +12,8 @@
   --ts-color-light: #00bfff;
   --react-color: #61dafb;
   --react-color-light: #00bfff;
+  --node-color: #428d45;
+  --node-color-light: #4caf50;
   --background-shape1-color: #ea3c5a;
   --background-shape2-color: #4294f7;
 }
@@ -72,6 +74,14 @@ body {
     to right,
     var(--react-color),
     var(--react-color-light)
+  );
+}
+
+.node {
+  background-image: linear-gradient(
+    to right,
+    var(--node-color),
+    var(--node-color-light)
   );
 }
 
