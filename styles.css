@@ -80,16 +80,25 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  column-gap: 2rem;
+  gap: 1rem;
   max-width: 997px;
+}
+
+.links > * {
+  flex: 1;
 }
 
 .links svg {
   width: 20px;
 }
 
-.links path {
+.links .fill-path {
   fill: var(--text-color);
+  width: 2rem;
+  transition: all 0.1s ease-in-out;
+}
+.links .stroke-path {
+  stroke: var(--text-color);
   width: 2rem;
   transition: all 0.1s ease-in-out;
 }
@@ -152,12 +161,30 @@ a:active {
   }
 
   .links {
-    flex-direction: column;
-    row-gap: 1rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .links > * {
+    flex: 1 1 calc(50% - 1rem);
+    max-width: calc(50% - 1rem);
   }
 }
 
 @media screen and (max-width: 768px) {
+  .links {
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .links > * {
+    flex: 1;
+    max-width: 100%;
+  }
+
   .title {
     font-size: 2.5rem;
   }
