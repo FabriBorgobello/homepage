@@ -78,14 +78,16 @@ p {
 .links {
   width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
   gap: 1rem;
   max-width: 997px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .links > * {
-  flex: 1;
+  flex: 1 1 calc(50% - 1rem);
+  max-width: calc(50% - 1rem);
 }
 
 .links svg {
@@ -95,12 +97,10 @@ p {
 .links .fill-path {
   fill: var(--text-color);
   width: 2rem;
-  transition: all 0.1s ease-in-out;
 }
 .links .stroke-path {
   stroke: var(--text-color);
   width: 2rem;
-  transition: all 0.1s ease-in-out;
 }
 
 a {
@@ -113,7 +113,6 @@ a {
   text-decoration: none;
   font-weight: bold;
   text-align: center;
-  transition: all 0.5s ease-in-out;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -158,17 +157,6 @@ a:active {
   body {
     padding: 6rem 2rem 10rem;
     row-gap: 4rem;
-  }
-
-  .links {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .links > * {
-    flex: 1 1 calc(50% - 1rem);
-    max-width: calc(50% - 1rem);
   }
 }
 
